@@ -2,8 +2,10 @@ const express = require("express");
 const mongoose = require("mongoose");
 const Project = require("./models/project.model.js");
 const projectRoute = require("./routes/project.route.js");
+const cors = require('cors');
 const app = express();
 
+app.use(cors());
 
 require('dotenv').config();
 const mongo_url = process.env.MONGO_URL
