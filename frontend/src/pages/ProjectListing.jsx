@@ -10,6 +10,8 @@ import InputLabel from '@mui/material/InputLabel';
 import InputAdornment from '@mui/material/InputAdornment';
 import FormControl from '@mui/material/FormControl';
 import TextField from '@mui/material/TextField';
+import ProjectCard from '../components/ProjectCard';
+import ProjectCardList from '../components/ProjectCardList';
 
 const baseURL = 'http://localhost:4000'
 
@@ -162,9 +164,13 @@ const ProjectListing = () => {
     setProjectsToShow(filteredProjects);
   }, [query, projects]);
 
+  console.log(rows)
   return (
     <Layout>
         <div>ProjectListing</div>
+        
+
+          
         <Box
           component="form"
           sx={{
@@ -176,23 +182,29 @@ const ProjectListing = () => {
       
           <TextField value={query} onChange={(e) => setQuery(e.target.value)} id="standard-basic" label="Search Project" variant="standard" />
         </Box>
-        <Box sx={{ height: 400, width: '100%' }}>
+
         
-          <DataGrid
-            rows={rows}
-            columns={columns}
-            initialState={{
-              pagination: {
-                paginationModel: {
-                  pageSize: 5,
+        <Box sx={{ height: 400, width: '100%' }}>
+        <div className='flex md:hidden'>
+          <ProjectCardList projects={rows}/>
+        </div>
+        <div className="hidden md:flex">
+            <DataGrid
+              rows={rows}
+              columns={columns}
+              initialState={{
+                pagination: {
+                  paginationModel: {
+                    pageSize: 5,
+                  },
                 },
-              },
-            }}
-            getRowId={(row) => row._id}
-            pageSizeOptions={[5]}
+              }}
+              getRowId={(row) => row._id}
+              pageSizeOptions={[5]}
             
-            disableRowSelectionOnClick
-          />
+              disableRowSelectionOnClick
+            />
+          </div>
         </Box>
     </Layout>
   )

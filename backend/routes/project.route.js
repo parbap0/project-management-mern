@@ -9,13 +9,8 @@ router.get("/:id", getProject);
 
 router.post("/", createProject);
 
-// update a project
 router.put("/:id", updateProject);
 
-// delete a project
 router.delete("/:id", deleteProject);
-
-
-
 
 module.exports = router;
