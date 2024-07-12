@@ -5,7 +5,7 @@ const ProjectCardList = ({projects}) => {
   return (
     <div>
         {projects.map((project, index) =>(
-            <ProjectCard project={project} key={index}/>
+            <ProjectCard  project={project} key={index}/>
         ))}
     </div>
   )

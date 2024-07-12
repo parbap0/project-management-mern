@@ -1,4 +1,3 @@
-// src/components/Login.js
 import React, { useState } from 'react';
 import authService from '../services/authService';
 import Avatar from '@mui/material/Avatar';
@@ -14,8 +13,12 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 const defaultTheme = createTheme();
+
+
+
 
 const Login = () => {
   const [formData, setFormData] = useState({ email: '', password: '' });
@@ -24,11 +27,14 @@ const Login = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const navigate = useNavigate();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       await authService.login(formData.email, formData.password);
-      alert('Login successful');
+      // alert('Login successful');
+      navigate('/')
     } catch (error) {
       console.error('Error logging in:', error);
       alert('Login failed');

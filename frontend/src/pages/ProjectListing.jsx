@@ -42,7 +42,7 @@ const ProjectListing = () => {
         <Button
           variant="contained"
           size="small"
-          style={{ marginLeft: 16 }}
+          // style={{ marginLeft: 16 }}
           onClick={handleUpdateStatus}
         >
           {buttonValue}
@@ -55,13 +55,13 @@ const ProjectListing = () => {
     {
       field: 'ProjectTheme',
       headerName: 'Project Theme',
-      width: 150,
+      width: 180,
       editable: true,
     },
     {
       field: 'Reason',
       headerName: 'Reason',
-      width: 150,
+      width: 110,
       editable: true,
     },
     {
@@ -73,13 +73,13 @@ const ProjectListing = () => {
     {
       field: 'Division',
       headerName: 'Division',
-      width: 150,
+      width: 110,
       editable: true,
     },
     {
       field: 'Category',
       headerName: 'Category',
-      width: 150,
+      width: 110,
       editable: true,
     },
     {
@@ -91,39 +91,39 @@ const ProjectListing = () => {
     {
       field: 'Department',
       headerName: 'Department',
-      width: 150,
+      width: 110,
       editable: true,
     },
     {
       field: 'Location',
       headerName: 'Location',
-      width: 150,
+      width: 110,
       editable: true,
     },
     {
       field: 'Status',
       headerName: 'Status',
-      width: 150,
+      width: 110,
       editable: true,
     },
     {
       field: 'Start',
       headerName: 'Start',
-      width: 150,
+      width: 110,
       renderCell: updateStatusButton("Running", 'Start'),
       disableClickEventBubbling: true
     },
     {
       field: 'Close',
       headerName: 'Close',
-      width: 150,
+      width: 110,
       renderCell: updateStatusButton("Closed", 'Close'),
       disableClickEventBubbling: true
     },
     {
       field: 'Cancel',
       headerName: 'Cancel',
-      width: 150,
+      width: 110,
       renderCell: updateStatusButton("Cancelled", 'Cancel'),
       disableClickEventBubbling: true
     }
@@ -149,6 +149,8 @@ const ProjectListing = () => {
     Category: item.Category,
     Priority: item.Priority,
     Department: item.Department,
+    StartDate: item.StartDate,
+    EndDate: item.EndDate,
     Location: item.Location,
     Status: item.Status
   }));

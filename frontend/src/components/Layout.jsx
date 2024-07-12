@@ -5,8 +5,8 @@ const Layout = ({children}) => {
   return (
     <div className="flex flex-col min-h-screen">
     <Navbar />
-    <img src={HeaderBG} alt="" />
-    <main className="flex-grow p-4 md:ml-16">
+    <img className='' src={HeaderBG} alt="" />
+    <main className=" flex flex-col flex-grow p-4 md:ml-16">
       {children}
     </main>
   </div>

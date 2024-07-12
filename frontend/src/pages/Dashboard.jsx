@@ -140,14 +140,14 @@ const DoubleBarChart = () => {
   return (
     <Layout>
         <div>Dashboard</div>
-        <div className='flex'>
-          <DashboardCard title={'Total Projects'} value={projects.length}/>
-          <DashboardCard title={'Closed'} value={statusWiseCount('Closed')}/>
-          <DashboardCard title={'Running'} value={statusWiseCount('Running')}/>
-          <DashboardCard title={'Closure Delay'} value={ClosureDelayCount()}/>
-          <DashboardCard title={'Cancelled'} value={statusWiseCount('Cancelled')}/>          
+        <div className="flex flex-wrap justify-evenly">
+            <DashboardCard title={'Total Projects'} value={projects.length} />
+            <DashboardCard title={'Closed'} value={statusWiseCount('Closed')} />
+            <DashboardCard title={'Running'} value={statusWiseCount('Running')} />
+            <DashboardCard title={'Closure Delay'} value={ClosureDelayCount()} />
+            <DashboardCard title={'Cancelled'} value={statusWiseCount('Cancelled')} />
         </div>
-        <div className='w-1/2'><DoubleBarChart/></div>
+        <div className='md:w-1/2'><DoubleBarChart/></div>
     </Layout>
   )
 }
