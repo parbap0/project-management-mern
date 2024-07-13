@@ -139,8 +139,9 @@ const DoubleBarChart = () => {
 
   return (
     <Layout>
-        <div>Dashboard</div>
-        <div className="flex flex-wrap justify-evenly">
+        <div className='fixed text-white md:static top-2 left-6 md:text-blue-800 md:text-3xl'>Dashboard</div>
+
+        <div className="flex flex-wrap justify-evenly mt-4">
             <DashboardCard title={'Total Projects'} value={projects.length} />
             <DashboardCard title={'Closed'} value={statusWiseCount('Closed')} />
             <DashboardCard title={'Running'} value={statusWiseCount('Running')} />

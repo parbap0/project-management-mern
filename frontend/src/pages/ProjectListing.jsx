@@ -169,26 +169,20 @@ const ProjectListing = () => {
   console.log(rows)
   return (
     <Layout>
-        <div>ProjectListing</div>
+        <div className='fixed text-white md:static top-2 left-6 md:text-blue-800 md:text-3xl'>ProjectListing</div>
         
 
           
-        <Box
-          component="form"
-          sx={{
-            '& > :not(style)': { m: 1, width: '25ch' },
-          }}
-          noValidate
-          autoComplete="off"
-        >
+        
       
-          <TextField value={query} onChange={(e) => setQuery(e.target.value)} id="standard-basic" label="Search Project" variant="standard" />
-        </Box>
+          <TextField sx={{marginTop: '3rem', marginBottom:'1rem'}} value={query} onChange={(e) => setQuery(e.target.value)} id="standard-basic" label="Search Project" variant="standard" />
+        
 
         
         <Box sx={{ height: 400, width: '100%' }}>
         <div className='flex md:hidden'>
-          <ProjectCardList projects={rows}/>
+        
+          <ProjectCardList projects={rows} setProjectToShow={setProjectsToShow}/>
         </div>
         <div className="hidden md:flex">
             <DataGrid

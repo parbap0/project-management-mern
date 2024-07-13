@@ -66,10 +66,11 @@ const ProjectForm = () => {
       };
   return (
     <Layout>
-        <div>ProjectForm</div>
+        <div className='fixed text-white md:static top-2 left-6 md:text-blue-800 md:text-3xl'>Create Project</div>
+
         <div className='flex flex-col'>
             <Box sx={{ minWidth: 120}}>
-                <div className="flex flex-col md:flex-wrap">
+                <div className="flex flex-col md:flex-wrap mt-4">
                   <TextField
                   className='md:w-1/2'
                   sx={{marginBottom:'1rem'}}

@@ -12,7 +12,7 @@ const Navbar = () => {
     const navigate = useNavigate();
 
   return (
-    <nav className="fixed bottom-0 left-0 w-full  md:left-0 md:h-full md:w-16 bg-white flex justify-center md:flex-col md:justify-center md:justify-start items-center p-4">
+    <nav className="fixed bottom-0 left-0 w-full  md:left-0 md:h-full md:w-16 bg-white flex justify-center md:flex-col md:justify-centeritems-center p-4">
       <div className="mx-2 my-2 md:mb-4 cursor-pointer" onClick={() => navigate('/')}>
         <img src={location.pathname == '/' ? DashboardSVGActive : DashboardSVG} alt="Dashboard" className="h-8 w-8" />
       </div>
