@@ -13,7 +13,7 @@ import TextField from '@mui/material/TextField';
 import ProjectCard from '../components/ProjectCard';
 import ProjectCardList from '../components/ProjectCardList';
 
-const baseURL = 'http://localhost:4000'
+const baseURL = 'https://techprimelab-backend-nol0.onrender.com'
 
 const ProjectListing = () => {
 
@@ -132,7 +132,7 @@ const ProjectListing = () => {
   useEffect(() => {
     console.log('effect')
     axios
-      .get('http://localhost:4000/api/projects')
+      .get('https://techprimelab-backend-nol0.onrender.com/api/projects')
       .then(response => {
         console.log('promise fulfilled')
         setProjects(response.data)

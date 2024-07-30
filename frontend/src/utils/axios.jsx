@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: 'http://localhost:4000/api',
+  baseURL: 'https://techprimelab-backend-nol0.onrender.com/api',
 });
 
 instance.interceptors.request.use((config) => {

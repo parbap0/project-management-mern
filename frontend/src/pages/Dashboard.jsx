@@ -55,7 +55,7 @@ const Dashboard = () => {
   useEffect(() => {
     console.log('effect')
     axios
-      .get('http://localhost:4000/api/projects')
+      .get('https://techprimelab-backend-nol0.onrender.com/api/projects')
       .then(response => {
         console.log('promise fulfilled')
         setProjects(response.data)

@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import CardHeader from '@mui/material/CardHeader';
 import axios from 'axios'
 
-const baseURL = 'http://localhost:4000'
+const baseURL = 'https://techprimelab-backend-nol0.onrender.com'
 
 const ProjectCard = ({project, setProjectsToShow}) => {
 
